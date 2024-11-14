@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="800.0" style="-fx-border-color: blue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RequestViewController">
+   <children>
+      <ImageView fitHeight="89.0" fitWidth="103.0" layoutX="363.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/Images/prms%20logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="176.0" layoutY="215.0" prefHeight="43.0" prefWidth="123.0" text="Name:">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="name" layoutX="177.0" layoutY="247.0" prefHeight="46.0" prefWidth="412.0" promptText="Client's name" />
+      <Label layoutX="61.0" layoutY="314.0" prefHeight="43.0" prefWidth="123.0" text="Gender:">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="363.0" layoutY="319.0" prefHeight="43.0" prefWidth="151.0" text="Date of Birth:">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="email" layoutX="185.0" layoutY="573.0" prefHeight="46.0" prefWidth="412.0" promptText="\@email.com" />
+      <Label layoutX="182.0" layoutY="442.0" prefHeight="43.0" prefWidth="170.0" text="Phone Number:">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="phoneNumber" layoutX="183.0" layoutY="472.0" prefHeight="46.0" prefWidth="412.0" promptText="xxx-xxx-xxx" />
+      <Label layoutX="184.0" layoutY="542.0" prefHeight="43.0" prefWidth="170.0" text="Email:">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="date" defaultColor="#4059a9" layoutX="365.0" layoutY="350.0" prefHeight="42.0" prefWidth="414.0" promptText="mm/dd/yyyy" />
+      <JFXRadioButton fx:id="maleGender" layoutX="62.0" layoutY="355.0" prefHeight="53.0" prefWidth="113.0" text="Male">
+         <font>
+            <Font name="Verdana" size="17.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="genders" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="femaleGender" layoutX="182.0" layoutY="355.0" prefHeight="53.0" prefWidth="136.0" text="Female" toggleGroup="$genders">
+         <font>
+            <Font name="Verdana" size="17.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXButton layoutX="426.0" layoutY="824.0" onAction="#onSubmitRequest" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #4271ff; -fx-background-radius: 50px;" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="219.0" layoutY="824.0" onAction="#onReset" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #dd0505; -fx-background-radius: 50px;" text="Reset" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="230.0" layoutY="114.0" prefHeight="71.0" prefWidth="378.0" style="-fx-background-color: blue; -fx-background-radius: 50px; -fx-border-width: 1px;" text="Request Page" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="667.0" prefHeight="43.0" prefWidth="233.0" text="Request Description:">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="description" layoutX="319.0" layoutY="664.0" prefHeight="120.0" prefWidth="351.0" promptText="Additional information" />
+   </children>
+</AnchorPane>

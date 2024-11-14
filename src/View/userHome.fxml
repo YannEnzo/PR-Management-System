@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="960.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UserHomeController">
+   <children>
+      <AnchorPane prefHeight="960.0" prefWidth="250.0" style="-fx-background-color: #dddddd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="194.0" fitWidth="225.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../Resources/Images/prms%20logo.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="52.0" layoutY="854.0" onAction="#onLogOut" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #4271ff; -fx-background-radius: 50px;" text="    Log out" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="52.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView glyphName="SIGN_OUT" layoutX="76.0" layoutY="893.90625" size="25" wrappingWidth="28.666671752929688" AnchorPane.bottomAnchor="62.034040451049805" AnchorPane.leftAnchor="76.0" />
+            <JFXButton alignment="BOTTOM_CENTER" layoutY="368.0" onAction="#onHome" prefHeight="146.0" prefWidth="250.0" text="HOME" textFill="#11025a" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="34.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" layoutY="516.0" onAction="#onCatalogue" prefHeight="146.0" prefWidth="250.0" text="CATALOGUE" textFill="#11025a" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="28.0" />
+               </font>
+            </JFXButton>
+            <Separator layoutX="26.0" layoutY="239.0" prefHeight="6.0" prefWidth="200.0" style="-fx-background-color: #11025A;" AnchorPane.leftAnchor="26.0" />
+            <Separator layoutX="29.0" layoutY="820.0" prefHeight="6.0" prefWidth="200.0" style="-fx-background-color: #11025A;" AnchorPane.leftAnchor="26.0" />
+            <FontAwesomeIconView fill="#11025a" glyphName="LIST" layoutX="97.0" layoutY="606.0" size="60" />
+            <FontAwesomeIconView fill="#11025a" glyphName="HOME" layoutX="99.0" layoutY="444.0" size="60" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="content1" layoutX="250.0" prefHeight="960.0" prefWidth="1350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="155.0" fitWidth="161.0" layoutX="956.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/Images/userlogo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="1111.0" layoutY="75.0" prefHeight="55.0" prefWidth="187.0" text="Welcome,">
+               <font>
+                  <Font name="Blackadder ITC" size="33.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="userName" editable="false" layoutX="1116.0" layoutY="124.0" prefHeight="44.0" prefWidth="223.0" promptText="User">
+               <font>
+                  <Font name="Lucida Calligraphy Italic" size="28.0" />
+               </font>
+            </JFXTextField>
+            <TableView fx:id="tableOfNodes" layoutX="3.0" layoutY="261.0" prefHeight="564.0" prefWidth="1342.0">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="194.0" text="Residence ID" />
+                <TableColumn fx:id="typeCol" minWidth="4.33331298828125" prefWidth="193.6666259765625" text="Type" />
+                  <TableColumn fx:id="categoryCol" minWidth="4.33331298828125" prefWidth="232.3333740234375" text="Category" />
+                  <TableColumn fx:id="rentCol" minWidth="4.33331298828125" prefWidth="265.0" text="Rent" />
+                  <TableColumn fx:id="availabilityCol" minWidth="4.33331298828125" prefWidth="222.333251953125" text="Availability" />
+                  <TableColumn fx:id="tenantCol" minWidth="4.33331298828125" prefWidth="231.0" text="Tenant" />
+              </columns>
+            </TableView>
+            <JFXButton layoutX="1184.0" layoutY="860.0" onAction="#onRequest" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #4271ff; -fx-background-radius: 50px;" text="Request" textFill="WHITE" AnchorPane.bottomAnchor="47.0" AnchorPane.rightAnchor="15.0">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="currentDate" alignment="CENTER" editable="false" layoutX="1032.0" layoutY="198.0" prefHeight="44.0" prefWidth="308.0" promptText="Date">
+               <font>
+                  <Font name="Lucida Console" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="searchItem" layoutX="94.0" layoutY="198.0" onKeyReleased="#search" prefHeight="46.0" prefWidth="695.0" promptText="Search" style="-fx-background-radius: 10px; -fx-border-width: 0px 0px 0px 0px;">
+               <font>
+                  <Font name="Lucida Console" size="20.0" />
+               </font>
+            </JFXTextField>
+            <FontAwesomeIconView fill="#11025a" glyphName="SEARCH" layoutX="740.0" layoutY="232.0" size="40" text="" wrappingWidth="21.499997556209564" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="403.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+    <children>
+      <ImageView fitHeight="403.0" fitWidth="649.0">
+         <image>
+            <Image url="@../Resources/Images/bg.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="406.0" layoutY="267.0" onAction="#userlogin" prefHeight="68.0" prefWidth="143.0" style="-fx-background-color: #29318a;" text="USER" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="23.0" />
+         </font>
+         <effect>
+            <DropShadow color="#5962ff" height="31.0" radius="22.5" width="61.0" />
+         </effect>
+       
+      </JFXButton>
+      <ImageView fitHeight="285.0" fitWidth="287.0" layoutX="172.0" layoutY="-47.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/Images/prms%20logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="199.0" layoutY="220.0" text="Are you an ADMIN Or a USER ?">
+         <font>
+            <Font name="Cambria Math" size="22.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="135.0" layoutY="267.0" onAction="#adminlogin" prefHeight="68.0" prefWidth="143.0" style="-fx-background-color: #29318a;" text="ADMIN" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="23.0" />
+         </font>
+         <effect>
+            <DropShadow color="#5962ff" height="31.0" radius="22.5" width="61.0" />
+         </effect>
+        
+      </JFXButton>
+    </children>
+</AnchorPane>
