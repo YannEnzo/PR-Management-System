@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.adminControllers.AdminHomeController">
+   <children>
+      <BorderPane layoutX="-6.0" prefHeight="800.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="77.0" prefWidth="1400.0" style="-fx-background-color: #29318a;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label contentDisplay="CENTER" layoutX="441.0" layoutY="24.0" prefHeight="30.0" prefWidth="608.0" text="PROPERTY RENTAL MANAGEMENT SYSTEM" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="OCR A Extended" size="28.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BUILDING" layoutX="390.0" layoutY="47.0" size="25" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="BUILDING" layoutX="1015.0" layoutY="46.0" size="25" />
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="723.0" prefWidth="299.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="723.0" prefWidth="299.0" style="-fx-background-color: #29318a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="182.0" fitWidth="170.0" layoutX="58.0" layoutY="33.0">
+                           <image>
+                              <Image url="@../../Resources/Images/adminlogo.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="105.0" layoutY="200.0" text="Welcome," textFill="WHITE">
+                           <font>
+                              <Font name="Kristen ITC" size="19.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="userName" alignment="CENTER" disable="true" editable="false" focusColor="WHITE" labelFloat="true" layoutX="23.0" layoutY="231.0" mouseTransparent="true" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Admin name" unFocusColor="#ffffff00">
+                           <font>
+                              <Font name="Palatino Linotype" size="21.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </JFXTextField>
+                        <Button layoutX="6.0" layoutY="333.0" mnemonicParsing="false" onAction="#onHome" prefHeight="56.0" prefWidth="287.0" text="Home">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="HOME" size="20" />
+                           </graphic>
+                           <font>
+                              <Font name="OCR A Extended" size="25.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="7.0" layoutY="406.0" mnemonicParsing="false" onAction="#onNodeMgnt" prefHeight="56.0" prefWidth="287.0" text="Node Management">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="BUILDING" size="23" />
+                           </graphic>
+                           <font>
+                              <Font name="OCR A Extended" size="25.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="7.0" layoutY="479.0" mnemonicParsing="false" onAction="#onRequests" prefHeight="56.0" prefWidth="287.0" text="Requests">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="CHECK" size="20" />
+                           </graphic>
+                           <font>
+                              <Font name="OCR A Extended" size="25.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="17.0" layoutY="660.0" mnemonicParsing="false" onAction="#onLogOut" prefHeight="44.0" prefWidth="122.0" style="-fx-background-color: #3399ff;" text="     Logout" />
+                        <FontAwesomeIconView glyphName="SIGN_OUT" layoutX="34.0" layoutY="692.0" size="30" wrappingWidth="31.14285659790039" />
+                        <Separator layoutX="50.0" layoutY="267.0" prefWidth="200.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane fx:id="content" prefHeight="723.0" prefWidth="1102.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
