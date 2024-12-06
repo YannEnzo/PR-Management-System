@@ -1,6 +1,6 @@
 # PR Management System
 
-A Java-based Public Relations (PR) Management System designed to enhance the management of PR campaigns, streamline client interactions, and improve workflow efficiency for PR professionals.
+A Java-based Property Rental (PR) Management System designed to enhance the management of PR campaigns, streamline client interactions, and improve workflow efficiency for PR professionals.
 
 ## Project Overview
 
